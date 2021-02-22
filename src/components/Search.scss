@@ -1,0 +1,57 @@
+@use "../css/buttons.scss";
+@use "../css/colors.scss";
+
+.Search {
+    height: 100%;
+    max-width: 80%;
+    flex-grow: 1;
+    box-sizing: border-box;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .icon-button {
+        @include buttons.iconButton;
+    }
+
+    .text-button {
+        @include buttons.textButton;
+    }
+
+    .searchArea {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .inputArea {
+        display: flex;
+        align-items: center;
+        border-bottom: 2px solid colors.$color-primary;
+        font-size: xx-large;
+
+        @media only screen and (max-width: 500px) {
+            font-size: x-large;
+        }
+
+        input {
+            width: 95%;
+            border: none;
+            text-align: center;
+        }
+        input:focus {
+            outline: none;
+        }
+        input:focus::placeholder {
+            color: transparent;
+        }
+    }
+
+    .validation-error {
+        margin-top: 5px;
+    }
+    .search-error {
+        margin-top: 10px;
+    }
+}

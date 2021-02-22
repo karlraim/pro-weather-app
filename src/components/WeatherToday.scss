@@ -1,0 +1,46 @@
+@use "../css/colors.scss";
+
+.WeatherToday {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .date {
+        font-size: xx-large;
+    }
+
+    .description {
+        font-size: x-large;
+    }
+
+    .bottom {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: stretch;
+        justify-content: center;
+        color: colors.$color-secondary-light;
+
+        .wi {
+            margin: 10px 30px;
+        }
+    }
+
+    .day-temps {
+        font-size: large;
+        width: 150px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .day-temp {
+        span:last-child {
+            float: right;
+        }
+    }
+
+    .current-temp,
+    .wi {
+        font-size: 15vmin;
+    }
+}

@@ -1,0 +1,33 @@
+@use "sass:color";
+@use "./colors.scss";
+
+@mixin buttonTemplate {
+    outline: none;
+    cursor: pointer;
+    border: none;
+    padding: 1px;
+    color: colors.$color-primary;
+    background: transparent;
+    transition: all 0.2s ease;
+    &:hover {
+        background-color: color.scale(colors.$color-primary, $lightness: 95%);
+    }
+    &:disabled {
+        cursor: not-allowed;
+        background: transparent;
+        color: color.scale(colors.$color-primary, $lightness: 90%);
+    }
+}
+
+@mixin iconButton {
+    @include buttonTemplate();
+    border-radius: 50%;
+    padding: 2px;
+    font-size: inherit;
+}
+
+@mixin textButton {
+    @include buttonTemplate();
+    border-radius: 2px;
+    text-decoration: underline dotted;
+}

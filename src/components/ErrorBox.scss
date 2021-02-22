@@ -1,0 +1,14 @@
+@use "../css/colors.scss";
+
+.ErrorBox {
+    display: flex;
+    align-items: center;
+    font-size: small;
+    border: 1px solid colors.$color-danger;
+    border-radius: 5px;
+
+    .error-icon {
+        padding: 2px;
+        color: colors.$color-danger;
+    }
+}

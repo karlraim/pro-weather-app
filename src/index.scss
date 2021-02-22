@@ -1,0 +1,16 @@
+@use "./css/colors.scss";
+
+#root {
+    color: colors.$color-primary;
+    background-color: colors.$color-secondary;
+    font-family: Roboto, sans-serif;
+    font-size: medium;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+span.material-icons {
+    font-size: inherit;
+}
